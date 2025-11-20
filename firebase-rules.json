@@ -1,0 +1,25 @@
+{
+  "rules": {
+    "polls": {
+      ".read": true,
+      ".write": true,
+      "$pollId": {
+        ".validate": "newData.hasChildren()"
+      }
+    },
+    "emojis": {
+      ".read": true,
+      ".write": true,
+      "$slideId": {
+        ".validate": "newData.hasChildren()"
+      }
+    },
+    "presentation": {
+      "currentSlide": {
+        ".read": true,
+        ".write": true,
+        ".validate": "newData.hasChildren(['indexh', 'indexv', 'timestamp'])"
+      }
+    }
+  }
+}

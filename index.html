@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mastering Neapolitan Pizza in a Gas Oven</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title Slide -->
+
+            <!-- Welcome/Wait Slide -->
+      <section class="content-slide wait-slide">
+        <div class="lounge-animation">
+          <div class="coffee-cup">☕</div>
+          <div class="music-note note-1">🎵</div>
+          <div class="music-note note-2">🎶</div>
+          <div class="music-note note-3">🎵</div>
+          <div class="pizza-slice">🍕</div>
+          <div class="sparkle sparkle-1">✨</div>
+          <div class="sparkle sparkle-2">✨</div>
+          <div class="sparkle sparkle-3">✨</div>
+        </div>
+        
+        <h2>🎬 Ready to Start!</h2>
+        <p class="wait-message">Waiting for everyone to join...</p>
+        <div id="client-count-display" style="font-size: 1.5em; font-weight: 600; color: #4C5760; margin: 1em 0;">
+          👥 Connected: <span id="client-count">0</span> pizza lover(s)
+        </div>
+        <div class="highlight-box wait-instructions-box">
+          <h4>📱 How to Participate:</h4>
+          <ul>
+            <li>Vote on polls throughout the presentation</li>
+            <li>React with emojis to share your thoughts</li>
+            <li>Your feedback at the end is highly appreciated!</li>
+            <li>All interactions are live and synchronized 🔥</li>
+          </ul>
+        </div>
+      </section>
+      <section class="title-slide">
+        <h1>🍕 Mastering Neapolitan Pizza</h1>
+        <h3>Home Ovens, Global Love</h3>
+        <p class="subtitle">How to Make Authentic Pizza Without Moving to Naples</p>
+        <div class="presenter-info">
+          <p class="presenter-name">Luca Amoriello</p>
+          <p class="presenter-date">November 2025</p>
+        </div>
+      </section>
+
+
+
+      <!-- Opening Question Slide -->
+      <section>
+        <h2>Who loves pizza?</h2>
+        <p>Vote now! 🍕</p>
+        <p style="font-size: 0.4em; color: #66635B; font-style: italic; margin-top: 0.5em;">(Note: Pizza with kebab or pineapple doesn't count as "Yes") 🚫🍍</p>
+        <div class="poll" data-poll="pizza-love">
+          <button class="poll-option" data-option="yes">Yes! 🍕</button>
+          <button class="poll-option" data-option="no">No 😢</button>
+          <div class="poll-results">
+            <div class="result" id="result-yes">Yes: <span class="count">0</span></div>
+            <div class="result" id="result-no">No: <span class="count">0</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Joke Slide -->
+      <section>
+        <h2>Quick Fact</h2>
+        <p>"Money can't buy happiness... but it can buy flour, tomatoes, and mozzarella. Close enough!"</p>
+        <div class="emoji-reactions" data-slide="joke-slide">
+          <button class="emoji-btn" data-emoji="😂">😂 <span class="emoji-count" id="count-joke-slide-😂">0</span></button>
+        </div>
+      </section>
+
+      <!-- Introduction Slide -->
+      <section>
+        <h2>Why This Journey?</h2>
+        <div class="slide-content">
+          <div class="content-text">
+            <ul>
+              <li>🍕 Pizza speaks the universal language of togetherness</li>
+              <li>🔥 Making authentic Neapolitan pizza at home IS possible</li>
+              <li>🏠 No wood oven? No problem—gas or electric works too!</li>
+              <li>🎯 From first attempt to perfect pizza in your kitchen</li>
+            </ul>
+          </div>
+          <div class="content-image">
+            <img src="images/pizza1.jpeg" alt="Neapolitan Pizza">
+          </div>
+        </div>
+      </section>
+
+            <!-- Portfolio/Trust Slide -->
+      <section>
+        <h2>Proven Results</h2>
+        <p class="proven-subtitle">Years of experience, hundreds of pizzas, countless happy faces</p>
+        <div class="gallery-container">
+          <div class="pizza-gallery">
+            <div class="gallery-item">
+              <img src="images/pizza1.jpeg" alt="Perfect pizza crust">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza2.jpeg" alt="Margherita pizza">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza3.jpeg" alt="Pizza with basil">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza4.jpeg" alt="Sliced pizza">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza5.jpeg" alt="Classic Neapolitan">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza6.jpeg" alt="Fresh from oven">
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="gallery-item">
+              <img src="images/pizza7.jpeg" alt="Perfect pizza crust">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza8.jpeg" alt="Margherita pizza">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza9.jpeg" alt="Pizza with basil">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza1.jpeg" alt="Sliced pizza">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza2.jpeg" alt="Classic Neapolitan">
+            </div>
+            <div class="gallery-item">
+              <img src="images/pizza3.jpeg" alt="Fresh from oven">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Part: Essentials -->
+      <section>
+        <h2>The Essentials</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">🌾</div>
+            <h4>Tipo 00 Flour</h4>
+            <p>The foundation of great pizza - fine Italian flour</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🍅</div>
+            <h4>San Marzano Tomatoes</h4>
+            <p>Sweet, low acidity - the gold standard</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🧀</div>
+            <h4>Mozzarella "Fior di Latte"</h4>
+            <p>Silky texture, pure tradition</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🔥</div>
+            <h4>High Heat Setup</h4>
+            <p>Pizza stone + home oven from +250°C</p>
+          </div>
+        </div>
+      </section>
+
+            <!-- Main Part: Process -->
+      <section>
+        <h2>The Process</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Mix Ingredients</h4>
+              <p>Flour, water, salt, yeast - simple but precise</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Knead with Love</h4>
+              <p>10 minutes of gentle kneading, no shortcuts</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Rest 8-24 Hours</h4>
+              <p>Patience = flavor and perfect texture</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Shape Gently</h4>
+              <p>Use your hands only - no rolling pin!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Part: Bake -->
+      <section>
+        <h2>The Bake</h2>
+        <div class="slide-content">
+          <div class="content-text">
+            <div class="highlight-box">
+              <h4>⏱️ Preheat</h4>
+              <p>30 minutes with pizza stone at maximum temperature</p>
+            </div>
+            <div class="highlight-box">
+              <h4>⚡ Bake</h4>
+              <p>60-90 seconds at full heat - watch it closely!</p>
+            </div>
+            <div class="highlight-box">
+              <h4>✨ Result</h4>
+              <p>Leopard spots, airy edges, flavor explosion</p>
+            </div>
+          </div>
+          <div class="content-image">
+            <img src="images/pizza7.jpeg" alt="Pizza in oven">
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion Slide -->
+      <section>
+        <h2>Key Takeaways</h2>
+        <div class="takeaways" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px; margin: 1em auto;">
+          <div class="takeaway-item" onclick="showTakeawayDetail(0)" style="cursor: pointer; padding: 15px; background: white; border: 2px solid #D7CEB2; border-radius: 4px; transition: all 0.3s; position: relative; margin-bottom: 30px;">
+            <div style="font-size: 1.1em; font-weight: 500; color: #4C5760;">Quality Ingredients</div>
+          </div>
+          <div class="takeaway-item" onclick="showTakeawayDetail(1)" style="cursor: pointer; padding: 15px; background: white; border: 2px solid #D7CEB2; border-radius: 4px; transition: all 0.3s; position: relative; margin-bottom: 30px;">
+            <div style="font-size: 1.1em; font-weight: 500; color: #4C5760;">Patience with Dough</div>
+          </div>
+          <div class="takeaway-item" onclick="showTakeawayDetail(2)" style="cursor: pointer; padding: 15px; background: white; border: 2px solid #D7CEB2; border-radius: 4px; transition: all 0.3s; position: relative; margin-bottom: 30px;">
+            <div style="font-size: 1.1em; font-weight: 500; color: #4C5760;">High Heat Essential</div>
+          </div>
+          <div class="takeaway-item" onclick="showTakeawayDetail(3)" style="cursor: pointer; padding: 15px; background: white; border: 2px solid #D7CEB2; border-radius: 4px; transition: all 0.3s; position: relative; margin-bottom: 30px;">
+            <div style="font-size: 1.1em; font-weight: 500; color: #4C5760;">Practice Makes Perfect</div>
+          </div>
+        </div>
+        <div class="cta" style="margin-top: 1.5em;">
+          <h3>Try it today!</h3>
+          <p>If it fails, blame the oven—not the recipe 😄</p>
+        </div>
+
+        <!-- Overlay for takeaway details -->
+        <div id="takeaway-overlay" onclick="closeTakeawayDetail()" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;">
+          <div onclick="event.stopPropagation()" style="background: white; padding: 40px; border-radius: 8px; max-width: 600px; max-height: 80vh; overflow-y: auto; position: relative;">
+            <button onclick="closeTakeawayDetail()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 2em; cursor: pointer; color: #4C5760; line-height: 1;">×</button>
+            <div id="takeaway-detail-content"></div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        const takeawayDetails = [
+          {
+            title: "Quality Ingredients Matter",
+            content: "Use 00 flour (Caputo is the gold standard), San Marzano tomatoes, and Fior di Latte mozzarella. The difference between cheap and quality ingredients is night and day—don't skimp here! Your pizza is only as good as what you put in it."
+          },
+          {
+            title: "Patience with the Dough",
+            content: "Cold fermentation for 24-48 hours develops flavor and makes the dough easier to work with. This is what separates home pizza from restaurant quality. Plan ahead and let time do the work for you!"
+          },
+          {
+            title: "High Heat is Essential",
+            content: "Preheat your oven at max temp (250-280°C) for 30 minutes with a pizza stone. The pizza should cook in 60-90 seconds. Lower heat = soggy crust. Trust me on this—high heat is non-negotiable."
+          },
+          {
+            title: "Practice Makes Perfect",
+            content: "Your first pizzas will be disasters—mine were! But each attempt teaches you about dough handling, oven timing, and topping balance. By pizza #10, you'll be a pro. Don't give up!"
+          }
+        ];
+
+        function showTakeawayDetail(index) {
+          const overlay = document.getElementById('takeaway-overlay');
+          const content = document.getElementById('takeaway-detail-content');
+          const detail = takeawayDetails[index];
+          
+          content.innerHTML = `
+            <h2 style="color: #4C5760; margin-bottom: 0.3em; font-size: 0.85em;">${detail.title}</h2>
+            <p style="color: #66635B; font-size: 0.72em; line-height: 1.4;">${detail.content}</p>
+          `;
+          
+          overlay.style.display = 'flex';
+        }
+
+        function closeTakeawayDetail() {
+          document.getElementById('takeaway-overlay').style.display = 'none';
+        }
+
+        // Close overlay on slide change
+        if (window.Reveal) {
+          Reveal.on('slidechanged', closeTakeawayDetail);
+        }
+      </script>
+
+      <style>
+        @keyframes pulse-click {
+          0%, 100% {
+            box-shadow: 0 0 0 0 rgba(76, 87, 96, 0.7);
+          }
+          50% {
+            box-shadow: 0 0 0 10px rgba(76, 87, 96, 0);
+          }
+        }
+
+        @keyframes subtle-bounce {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-3px);
+          }
+        }
+
+        .takeaway-item {
+          animation: subtle-bounce 2s ease-in-out infinite;
+        }
+
+        .takeaway-item:hover {
+          border-color: #93A8AC !important;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transform: translateY(-2px);
+          animation: none;
+        }
+
+        .takeaway-item::after {
+          content: '👆 Click to learn more';
+          position: absolute;
+          bottom: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 0.75em;
+          color: #93A8AC;
+          white-space: nowrap;
+          opacity: 0;
+          animation: fade-in-out 3s ease-in-out infinite;
+          pointer-events: none;
+        }
+
+        @keyframes fade-in-out {
+          0%, 100% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+      </style>
+
+      <!-- Final Slide: Q&A + Thank You -->
+      <section class="final-slide">
+        <h2>Questions & Feedback</h2>
+        <p style="font-size: 0.9em; color: #66635B; margin: 0.5em 0;">Unless you're asking about pineapple 🍍🚫</p>
+        
+        <div style="margin: 1em 0;">
+          <p style="font-size: 0.85em; color: #4C5760; margin-bottom: 0.5em;">How was this presentation?</p>
+          <div class="emoji-reactions" style="display: flex; justify-content: center; gap: 15px;">
+            <button class="emoji-btn final-emoji" data-emoji="👍" style="background: none !important; border: none !important; font-size: 2em; cursor: pointer; padding: 5px;">👍 <span class="emoji-count">0</span></button>
+            <button class="emoji-btn final-emoji" data-emoji="😍" style="background: none !important; border: none !important; font-size: 2em; cursor: pointer; padding: 5px;">😍 <span class="emoji-count">0</span></button>
+            <button class="emoji-btn final-emoji" data-emoji="🍕" style="background: none !important; border: none !important; font-size: 2em; cursor: pointer; padding: 5px;">🍕 <span class="emoji-count">0</span></button>
+            <button class="emoji-btn final-emoji" data-emoji="🔥" style="background: none !important; border: none !important; font-size: 2em; cursor: pointer; padding: 5px;">🔥 <span class="emoji-count">0</span></button>
+            <button class="emoji-btn final-emoji" data-emoji="👏" style="background: none !important; border: none !important; font-size: 2em; cursor: pointer; padding: 5px;">👏 <span class="emoji-count">0</span></button>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5em; padding-top: 1em; border-top: 2px solid #D7CEB2;">
+          <p style="font-size: 1em; color: #4C5760; margin: 0.3em 0;">Thank you! 🍕</p>
+          <p style="font-size: 0.75em; color: #66635B; margin: 0.2em 0;">Luca Amoriello | luca.amoriello@dxc.com</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Fullscreen Warning Overlay -->
+  <div id="fullscreen-warning" style="
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(76, 87, 96, 0.95);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: none;
+    max-width: 280px;
+    font-size: 0.85em;
+    line-height: 1.4;
+  ">
+    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 6px;">
+      <strong style="color: #D7CEB2; font-size: 0.95em;">📺 Fullscreen Recommended</strong>
+      <button onclick="document.getElementById('fullscreen-warning').style.display='none'" style="
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.1em;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 8px;
+      ">×</button>
+    </div>
+    <p style="margin: 0; font-size: 0.9em; opacity: 0.9;">For the best experience, maximize your window or press F11 for fullscreen.</p>
+  </div>
+
+  <!-- Music Control Button -->
+  <button id="music-toggle" style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(76, 87, 96, 0.95);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: none;
+    transition: all 0.3s ease;
+  " onmouseover="this.style.background='rgba(147, 168, 172, 0.95)'" onmouseout="this.style.background='rgba(76, 87, 96, 0.95)'">
+    🔊 Music On
+  </button>
+
+  <!-- Presenter Mode Indicator (dynamic banner created when presenter) -->
+
+  <!-- Volume Warning -->
+  <div id="volume-warning" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(147, 168, 172, 0.95);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: none;
+    font-size: 0.85em;
+    animation: fadeInOut 4s ease-in-out;
+  ">
+    🔊 Turn up your volume for the best experience!
+  </div>
+
+  <style>
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      10%, 90% { opacity: 1; }
+    }
+
+    /* Lounge animations */
+    .lounge-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .wait-slide {
+      position: relative;
+    }
+
+    .wait-slide h2,
+    .wait-slide .wait-message,
+    .wait-slide .highlight-box {
+      position: relative;
+      z-index: 2;
+    }
+
+    .coffee-cup {
+      position: absolute;
+      font-size: 3em;
+      top: 10%;
+      left: 10%;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.4;
+      filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+    }
+
+    .music-note {
+      position: absolute;
+      font-size: 2em;
+      opacity: 0.5;
+      filter: drop-shadow(0 0 6px rgba(0,0,0,0.15));
+    }
+
+    .note-1 {
+      top: 15%;
+      right: 15%;
+      animation: float 4s ease-in-out infinite, spin 8s linear infinite;
+    }
+
+    .note-2 {
+      bottom: 25%;
+      left: 20%;
+      animation: float 5s ease-in-out infinite 1s, spin 10s linear infinite;
+    }
+
+    .note-3 {
+      top: 50%;
+      right: 25%;
+      animation: float 4.5s ease-in-out infinite 2s, spin 9s linear infinite;
+    }
+
+    .pizza-slice {
+      position: absolute;
+      font-size: 2.8em;
+      bottom: 15%;
+      right: 10%;
+      animation: float 5s ease-in-out infinite 1.5s, rotate 12s linear infinite;
+      opacity: 0.4;
+      filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+    }
+
+    .sparkle {
+      position: absolute;
+      font-size: 1.5em;
+      animation: twinkle 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 4px rgba(255,255,255,0.6));
+    }
+
+    .sparkle-1 {
+      top: 25%;
+      left: 30%;
+      animation-delay: 0s;
+    }
+
+    .sparkle-2 {
+      top: 65%;
+      right: 30%;
+      animation-delay: 1s;
+    }
+
+    .sparkle-3 {
+      bottom: 35%;
+      left: 50%;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes rotate {
+      0%, 100% { transform: rotate(-15deg); }
+      50% { transform: rotate(15deg); }
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+  </style>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(76, 87, 96, 0.95);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 10000;
+    display: none;
+    font-size: 0.9em;
+    min-width: 200px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+  ">
+    <span id="toast-message"></span>
+  </div>
+
+  <style>
+    @keyframes slideIn {
+      from {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slideOut {
+      from {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+    }
+    @keyframes popIn {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes popOut {
+      to {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+    }  </style>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script src="js/plugins.js"></script>
+  <script>
+    // Firebase configuration
+    // Note: Queste credenziali sono pubbliche, la sicurezza è nelle Firebase Rules
+    const firebaseConfig = {
+      apiKey: "AIzaSyA_e1VWzWwmqJ8hX5V2gISeiAtecfskSGI",
+      authDomain: "live-slides-5e65e.firebaseapp.com",
+      databaseURL: "https://live-slides-5e65e-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "live-slides-5e65e",
+      storageBucket: "live-slides-5e65e.firebasestorage.app",
+      messagingSenderId: "242167016196",
+      appId: "1:242167016196:web:1dc52435b4a17bf66b3e51",
+      measurementId: "G-MGL3YT9YL0"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
+    // Generate unique client ID
+    const clientId = 'client_' + Math.random().toString(36).substr(2, 9);
+    const clientsRef = database.ref('clients');
+    
+    // Register this client
+    const clientPresence = clientsRef.child(clientId);
+    clientPresence.set({
+      joinedAt: new Date().toISOString(),
+      active: true
+    });
+    
+    // Remove this client when disconnected
+    clientPresence.onDisconnect().remove();
+    
+    // Listen to client count changes
+    clientsRef.on('value', (snapshot) => {
+      const clients = snapshot.val() || {};
+      const clientCount = Object.keys(clients).length;
+      const countDisplay = document.getElementById('client-count');
+      if (countDisplay) {
+        countDisplay.textContent = clientCount;
+      }
+    });
+
+    // Check if presenter mode (add ?presenter to URL)
+    const urlParams = new URLSearchParams(window.location.search);
+    const wantsPresenterMode = urlParams.has('presenter');
+    
+    // Presenter password check
+    let isPresenter = false;
+    const PRESENTER_PASSWORD = 'pizza2025'; // Change this to your preferred password
+    
+    if (wantsPresenterMode) {
+      console.log('🔐 Presenter mode requested');
+      const savedPassword = localStorage.getItem('presenterPassword');
+      console.log('Saved password in localStorage:', savedPassword ? 'exists' : 'not found');
+      
+      if (savedPassword === PRESENTER_PASSWORD) {
+        isPresenter = true;
+        console.log('✅ Presenter mode activated from saved password');
+      } else {
+        // Clear any old wrong password
+        if (savedPassword) {
+          localStorage.removeItem('presenterPassword');
+        }
+        
+        // Create custom password overlay
+        const passwordOverlay = document.createElement('div');
+        passwordOverlay.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.9);
+          z-index: 99999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        `;
+        
+        const passwordBox = document.createElement('div');
+        passwordBox.style.cssText = `
+          background: white;
+          padding: 40px;
+          border-radius: 8px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+          text-align: center;
+          max-width: 400px;
+        `;
+        
+        passwordBox.innerHTML = `
+          <h2 style="color: #4C5760; margin-bottom: 10px;">🔐 Presenter Mode</h2>
+          <p style="color: #66635B; margin-bottom: 20px;">Enter password to continue</p>
+          <input type="password" id="presenter-password-input" 
+            style="width: 100%; padding: 12px; border: 2px solid #D7CEB2; border-radius: 4px; font-size: 1em; margin-bottom: 20px; box-sizing: border-box;"
+            placeholder="Password">
+          <div style="display: flex; gap: 10px;">
+            <button id="password-submit" style="flex: 1; padding: 12px; background: #4C5760; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1em;">
+              Enter
+            </button>
+            <button id="password-cancel" style="flex: 1; padding: 12px; background: #A59E8C; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1em;">
+              Cancel
+            </button>
+          </div>
+          <p id="password-error" style="color: #d9534f; margin-top: 15px; display: none; font-size: 0.9em;">Incorrect password</p>
+        `;
+        
+        passwordOverlay.appendChild(passwordBox);
+        document.body.appendChild(passwordOverlay);
+        
+        const input = document.getElementById('presenter-password-input');
+        const submitBtn = document.getElementById('password-submit');
+        const cancelBtn = document.getElementById('password-cancel');
+        const errorMsg = document.getElementById('password-error');
+        
+        input.focus();
+        
+        const checkPassword = () => {
+          const enteredPassword = input.value;
+          
+          if (enteredPassword === PRESENTER_PASSWORD) {
+            localStorage.setItem('presenterPassword', enteredPassword);
+            console.log('✅ Correct password - reloading as presenter');
+            window.location.reload();
+          } else {
+            errorMsg.style.display = 'block';
+            input.value = '';
+            input.focus();
+          }
+        };
+        
+        submitBtn.onclick = checkPassword;
+        input.onkeypress = (e) => {
+          if (e.key === 'Enter') checkPassword();
+        };
+        
+        cancelBtn.onclick = () => {
+          console.log('User cancelled - switching to audience mode');
+          window.history.replaceState({}, document.title, window.location.pathname);
+          window.location.reload();
+        };
+      }
+    }
+    
+    console.log('Current presenter status:', isPresenter);
+
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealPoll, RevealEmoji ],
+      width: '100%',
+      height: '100%',
+      margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2.0,
+      center: true
+    });
+
+    // Slide synchronization
+    const slideStateRef = database.ref('presentation/currentSlide');
+
+    if (isPresenter) {
+      // Presenter mode: publish slide changes
+      document.body.style.borderTop = '3px solid #93A8AC';
+      document.body.style.boxSizing = 'border-box';
+      
+      const presenterBanner = document.createElement('div');
+      presenterBanner.style.cssText = `
+        position: fixed;
+        bottom: 70px;
+        left: 20px;
+        background: rgba(147, 168, 172, 0.95);
+        color: white;
+        padding: 8px 12px;
+        font-size: 0.85em;
+        font-weight: normal;
+        z-index: 99999;
+        border-radius: 6px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        pointer-events: auto;
+      `;
+      
+      const titleSpan = document.createElement('span');
+      titleSpan.textContent = '🎤 Presenter';
+      titleSpan.style.opacity = '0.8';
+      
+      const resetBtn = document.createElement('button');
+      resetBtn.textContent = '🔄 Reset';
+      resetBtn.title = 'Double-click to reset all counts';
+      resetBtn.style.cssText = `
+        background: rgba(215, 206, 178, 0.9);
+        color: #4C5760;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: all 0.2s;
+        pointer-events: auto;
+      `;
+      
+      let clickCount = 0;
+      let clickTimer = null;
+      
+      resetBtn.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        clickCount++;
+        console.log(`Click ${clickCount} on reset button`);
+        
+        if (clickCount === 1) {
+          resetBtn.textContent = '🔄 Click again!';
+          resetBtn.style.background = 'rgba(165, 158, 140, 0.9)';
+          
+          clickTimer = setTimeout(() => {
+            clickCount = 0;
+            resetBtn.textContent = '🔄 Reset';
+            resetBtn.style.background = 'rgba(215, 206, 178, 0.9)';
+          }, 2000);
+        } else if (clickCount === 2) {
+          clearTimeout(clickTimer);
+          clickCount = 0;
+          
+          console.log('Double click confirmed - resetting...');
+          resetBtn.textContent = '⏳ Resetting...';
+          
+          // Reset all data
+          database.ref('polls').set(null)
+            .then(() => {
+              console.log('✅ Polls reset successfully');
+              return database.ref('emojis').set(null);
+            })
+            .then(() => {
+              console.log('✅ Emojis reset successfully');
+              return database.ref('notifications').set(null);
+            })
+            .then(() => {
+              console.log('✅ All data reset successfully');
+              resetBtn.textContent = '✅ Done!';
+              resetBtn.style.background = 'rgba(147, 168, 172, 0.9)';
+              setTimeout(() => {
+                resetBtn.textContent = '🔄 Reset';
+                resetBtn.style.background = 'rgba(215, 206, 178, 0.9)';
+              }, 2000);
+            })
+            .catch(err => {
+              console.error('❌ Error resetting:', err);
+              resetBtn.textContent = '❌ Error!';
+              setTimeout(() => {
+                resetBtn.textContent = '🔄 Reset';
+                resetBtn.style.background = 'rgba(215, 206, 178, 0.9)';
+              }, 2000);
+            });
+        }
+      };
+      
+      resetBtn.addEventListener('mouseover', () => {
+        if (clickCount === 0) {
+          resetBtn.style.background = 'rgba(165, 158, 140, 0.9)';
+        }
+      });
+      resetBtn.addEventListener('mouseout', () => {
+        if (clickCount === 0) {
+          resetBtn.style.background = 'rgba(215, 206, 178, 0.9)';
+        }
+      });
+      
+      presenterBanner.appendChild(titleSpan);
+      presenterBanner.appendChild(resetBtn);
+      document.body.appendChild(presenterBanner);
+
+      Reveal.on('slidechanged', event => {
+        slideStateRef.set({
+          indexh: event.indexh,
+          indexv: event.indexv || 0,
+          timestamp: Date.now()
+        });
+      });
+    } else {
+      // Audience mode: follow presenter
+      const audienceBanner = document.createElement('div');
+      audienceBanner.style.cssText = `
+        position: fixed;
+        bottom: 70px;
+        left: 20px;
+        background: rgba(147, 168, 172, 0.9);
+        color: white;
+        padding: 8px 12px;
+        font-size: 0.85em;
+        font-weight: normal;
+        z-index: 10000;
+        border-radius: 6px;
+        opacity: 0.8;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      `;
+      audienceBanner.textContent = '👥 Synced';
+      document.body.appendChild(audienceBanner);
+
+      let ignoreSlideChange = false;
+
+      slideStateRef.on('value', (snapshot) => {
+        const state = snapshot.val();
+        if (state) {
+          ignoreSlideChange = true;
+          Reveal.slide(state.indexh, state.indexv || 0);
+          setTimeout(() => { ignoreSlideChange = false; }, 100);
+        }
+      });
+    }
+
+    // Fullscreen warning
+    function checkWindowSize() {
+      const warning = document.getElementById('fullscreen-warning');
+      const minWidth = 1024;
+      const minHeight = 768;
+      
+      if (window.innerWidth < minWidth || window.innerHeight < minHeight) {
+        warning.style.display = 'block';
+      } else {
+        warning.style.display = 'none';
+      }
+    }
+
+    // Check on load and resize
+    window.addEventListener('load', checkWindowSize);
+    window.addEventListener('resize', checkWindowSize);
+
+    // Waiting music on first slide - upbeat lounge music
+    const waitingMusic = new Audio('https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3');
+    waitingMusic.loop = true;
+    waitingMusic.volume = 0.3;
+    let isMusicPlaying = false;
+    let musicEnabled = true;
+
+    const musicToggle = document.getElementById('music-toggle');
+    const volumeWarning = document.getElementById('volume-warning');
+
+    // Music toggle button handler
+    musicToggle.addEventListener('click', () => {
+      musicEnabled = !musicEnabled;
+      if (musicEnabled && Reveal.getState().indexh === 0) {
+        waitingMusic.play().catch(e => console.log('Music blocked:', e));
+        isMusicPlaying = true;
+        musicToggle.innerHTML = '🔊 Music On';
+      } else {
+        waitingMusic.pause();
+        isMusicPlaying = false;
+        musicToggle.innerHTML = '🔇 Music Off';
+      }
+    });
+
+    Reveal.on('ready', event => {
+      if (event.indexh === 0) {
+        musicToggle.style.display = 'block';
+        volumeWarning.style.display = 'block';
+        setTimeout(() => {
+          volumeWarning.style.display = 'none';
+        }, 4000);
+        
+        if (musicEnabled) {
+          waitingMusic.play().catch(e => {
+            console.log('Music autoplay blocked:', e);
+            // If blocked, show music control immediately
+            musicToggle.innerHTML = '🔇 Click to enable music';
+          });
+          isMusicPlaying = true;
+        }
+      }
+    });
+
+    Reveal.on('slidechanged', event => {
+      if (event.indexh === 0) {
+        // First slide - show controls and play music
+        musicToggle.style.display = 'block';
+        if (musicEnabled) {
+          waitingMusic.play().catch(e => console.log('Music blocked:', e));
+          isMusicPlaying = true;
+          musicToggle.innerHTML = '🔊 Music On';
+        }
+      } else {
+        // Not on first slide - hide controls
+        musicToggle.style.display = 'none';
+        
+        if (event.previousSlide && event.previousSlide.matches(':first-child') && isMusicPlaying) {
+          // Leaving first slide - fade out
+          const fadeOutInterval = setInterval(() => {
+            if (waitingMusic.volume > 0.05) {
+              waitingMusic.volume = Math.max(0, waitingMusic.volume - 0.05);
+            } else {
+              waitingMusic.pause();
+              waitingMusic.currentTime = 0;
+              waitingMusic.volume = 0.2;
+              isMusicPlaying = false;
+              clearInterval(fadeOutInterval);
+            }
+          }, 100);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

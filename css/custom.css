@@ -1,0 +1,1150 @@
+/* ===== PALETTE COLORI ===== */
+/* 
+#4C5760 - Grigio scuro principale
+#93A8AC - Azzurro-grigio 
+#D7CEB2 - Beige chiaro
+#A59E8C - Beige medio
+#66635B - Grigio-marrone
+*/
+
+/* ===== TEMA GENERALE ===== */
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.reveal {
+  background: #f5f5f5;
+}
+
+.reveal section {
+  padding: 40px 50px !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+/* Tipografia responsive con scaling migliore */
+.reveal h1 {
+  color: #4C5760;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4em;
+  font-size: 1.5em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.reveal h2 {
+  color: #4C5760;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  padding-bottom: 0;
+  border: none;
+  font-size: 1.3em;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.reveal h3 {
+  color: #66635B;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.reveal p {
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #66635B;
+  text-align: center;
+  margin: 0.4em auto;
+  max-width: 800px;
+}
+
+.reveal h4 {
+  color: #4C5760;
+  font-weight: 500;
+  margin: 0.4em 0;
+  font-size: 0.85em;
+  line-height: 1.2;
+}
+
+.reveal p, .reveal li {
+  color: #333;
+  line-height: 1.5;
+  font-size: 0.75em;
+}
+
+.reveal ul {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+/* ===== SLIDE TITOLO ===== */
+.title-slide {
+  background: linear-gradient(135deg, #93A8AC 0%, #4C5760 100%) !important;
+  color: white !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  position: relative !important;
+  padding: 40px 20px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.title-slide h1,
+.title-slide h3,
+.title-slide p {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  border: none !important;
+}
+
+.title-slide h1 {
+  margin-bottom: 0.3em;
+}
+
+.title-slide h3 {
+  margin: 0.2em 0;
+}
+
+.title-slide .subtitle {
+  font-size: 1em;
+  margin: 0.6em 0 1.2em;
+  opacity: 0.9;
+  color: #D7CEB2 !important;
+}
+
+/* Presenter info */
+.presenter-info {
+  margin-top: 1.5em;
+  padding-top: 1.2em;
+  border-top: 2px solid rgba(215, 206, 178, 0.4);
+  width: 100%;
+  max-width: 600px;
+}
+
+.presenter-name {
+  font-size: 1em;
+  font-weight: 600;
+  color: #D7CEB2 !important;
+  margin: 0.3em 0;
+}
+
+.presenter-date {
+  font-size: 0.9em;
+  color: #D7CEB2 !important;
+  margin: 0.3em 0;
+  opacity: 0.8;
+}
+
+/* Footer info */
+.footer-info {
+  margin-top: 1.5em;
+  padding-top: 1.2em;
+  border-top: 2px solid rgba(215, 206, 178, 0.4);
+  width: 100%;
+  max-width: 600px;
+  font-size: 0.85em;
+  color: #D7CEB2 !important;
+}
+
+.footer-info p {
+  margin: 0.3em 0;
+  color: #D7CEB2 !important;
+}
+
+.contact-info {
+  opacity: 0.8;
+  font-size: 0.9em;
+}
+
+.thank-you-text {
+  margin-top: 1.5em !important;
+  font-size: 1em !important;
+}
+
+/* Wait slide styles */
+.wait-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.wait-message {
+  font-size: 1.1em;
+  margin: 0.8em 0;
+  color: #4C5760;
+}
+
+.wait-content .highlight-box {
+  text-align: left;
+  margin: 1em auto;
+  max-width: 600px;
+}
+
+.wait-instructions {
+  margin: 0.3em 0;
+  padding-left: 1.5em;
+  font-size: 0.85em;
+}
+
+.wait-instructions li {
+  margin-bottom: 0.3em;
+}
+
+.wait-footer {
+  font-size: 1em;
+  margin-top: 1em;
+  color: #66635B;
+  font-style: italic;
+}
+
+/* Final slide styles */
+
+
+/* Layout slide-content (testo + immagine) - STANDARDIZZATO */
+.slide-content {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 30px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-text {
+  text-align: left;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering of text block */
+}
+
+.content-text ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.content-text li {
+  padding: 12px 0;
+  line-height: 1.6;
+  font-size: 0.85em;
+  color: #4C5760;
+}
+
+.content-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.content-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Cards grid used in Essentials slide */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  background: white;
+  padding: 18px 12px;
+  border-radius: 4px;
+  border: 2px solid #D7CEB2;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  box-sizing: border-box;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-color: #93A8AC;
+}
+
+.card-icon {
+  font-size: 2em;
+  margin-bottom: 12px;
+}
+
+.card h4 {
+  margin: 8px 0;
+  font-size: 0.8em;
+  color: #4C5760;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 0.7em;
+  color: #66635B;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===== STEPS - STANDARDIZZATO ===== */
+.steps {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 15px;
+  margin: 15px 0;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #93A8AC 0%, #4C5760 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.step-content {
+  background: white;
+  border: 2px solid #D7CEB2;
+  border-radius: 4px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.step-content h4 {
+  margin: 0 0 8px;
+  font-size: 0.9em;
+  color: #4C5760;
+  font-weight: 500;
+}
+
+.step-content p {
+  margin: 0;
+  color: #66635B;
+  font-size: 0.8em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ===== HIGHLIGHT BOXES - STANDARDIZZATO ===== */
+.highlight-box {
+  background: white;
+  border: 2px solid #D7CEB2;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 12px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.highlight-box h4 {
+  margin: 0 0 8px;
+  color: #4C5760;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.highlight-box p {
+  margin: 0;
+  color: #66635B;
+  font-size: 0.75em;
+  text-align: left;
+}
+
+/* ===== TAKEAWAYS - STANDARDIZZATO ===== */
+.takeaways {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.takeaway-item {
+  background: white;
+  padding: 15px;
+  border-radius: 4px;
+  border: 2px solid #D7CEB2;
+  font-weight: 500;
+  color: #4C5760;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  font-size: 1em;
+  box-sizing: border-box;
+  line-height: 1.3;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.takeaway-item:hover {
+  transform: translateY(-2px);
+  border-color: #93A8AC;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cta {
+  margin-top: 1.5em;
+  padding: 18px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  border: 2px solid #D7CEB2;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.cta h3 {
+  color: #4C5760;
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+
+.cta p {
+  margin: 0;
+  font-size: 0.9em;
+  min-height: 140px;
+}
+
+/* ===== POLL STYLES ===== */
+.poll {
+  margin-top: 1em;
+}
+.poll-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px;
+  padding: 10px 18px;
+  min-width: 120px;
+  font-size: 1em;
+  background: white;
+  color: #4C5760;
+  border: 2px solid #4C5760;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.14s ease, background 0.18s ease, color 0.18s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  font-weight: 600;
+  text-align: center;
+}
+
+.poll-option:hover {
+  transform: none;
+  box-shadow: none;
+  background: #4C5760;
+  color: white;
+}
+
+.poll-option:active {
+  transform: translateY(-1px);
+}
+
+.poll-results {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.result {
+  padding: 10px 16px;
+  background: white;
+  border-radius: 2px;
+  font-size: 0.85em;
+  font-weight: 500;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border: 1px solid #e8e8e8;
+  border-top: 2px solid #4C5760;
+  box-sizing: border-box;
+}
+
+.result .count {
+  display: block;
+  font-size: 1.8em;
+  color: #4C5760;
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+/* ensure poll buttons look good on small screens */
+@media (max-width: 480px) {
+  .poll-option {
+    min-width: 90px;
+    padding: 8px 12px;
+    font-size: 0.95em;
+  }
+  .result { min-width: 80px; }
+}
+
+/* ===== EMOJI REACTIONS ===== */
+.emoji-reactions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 1.2em;
+  flex-wrap: wrap;
+}
+
+.emoji-btn {
+  background: white;
+  width: 60px;
+  height: 60px;
+  font-size: 1.7em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: none;
+}
+
+.emoji-btn:hover {
+  transform: none;
+  border-color: #4C5760;
+  box-shadow: none;
+}
+
+.emoji-btn:hover {
+  transform: none;
+  border-color: #4C5760;
+  box-shadow: none;
+}
+
+.emoji-btn:active {
+  transform: scale(1.05);
+}
+
+.emoji-count {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  background: #4C5760;
+  color: white;
+  border-radius: 0;
+  width: 25px;
+  height: 25px;
+  font-size: 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  box-shadow: none;
+  border: 2px solid white;
+}
+
+/* Slightly larger emoji button for the short-joke slide for visibility */
+.emoji-reactions[data-slide="joke-slide"] .emoji-btn {
+  width: 72px;
+  height: 72px;
+  font-size: 2.0em;
+}
+
+/* ===== ANIMAZIONI ===== */
+@keyframes float-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(1.5);
+  }
+}
+
+/* Pressed / reaction animation (used for local + remote feedback) */
+.pressed {
+  transform: scale(1.12) !important;
+  transition: transform 0.14s ease !important;
+  /* box-shadow: 0 6px 18px rgba(0,0,0,0.12) !important; */
+}
+
+/* small pop animation for poll buttons */
+.poll-option.pressed {
+  transform: scale(1.06) !important;
+  background: #4C5760 !important;
+  color: white !important;
+}
+
+/* ===== WAIT SLIDE ===== */
+.wait-slide {
+  text-align: center;
+}
+
+.wait-message {
+  font-size: 1.1em;
+  margin: 0.8em 0;
+  color: #4C5760;
+}
+
+.wait-instructions-box {
+  text-align: left;
+  margin: 1em auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wait-instructions-box h4 {
+  margin-bottom: 0.5em;
+}
+
+.wait-instructions-box ul {
+  margin: 0;
+  padding-left: 1.5em;
+  font-size: 0.85em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4em 1.5em;
+  list-style-position: inside;
+}
+
+.wait-instructions-box li {
+  margin-bottom: 0.3em;
+  line-height: 1.4;
+}
+
+.wait-footer {
+  font-size: 0.95em;
+  margin-top: 1.2em;
+  color: #66635B;
+  font-style: italic;
+}
+
+/* ===== PIZZA GALLERY ===== */
+.gallery-container {
+  width: 100%;
+  overflow: hidden; /* hide during large-screen auto-scroll */
+  position: relative;
+  margin-top: 1em;
+}
+
+.pizza-gallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  /* animation only enabled on wide screens via media query below */
+}
+
+
+
+/* Proven Results subtitle (center and constrain width) */
+.proven-subtitle {
+  text-align: center !important;
+  font-size: 0.8em !important;
+  color: #66635B !important;
+  margin: 0.5em auto 1em auto !important;
+  max-width: 900px !important;
+  display: block !important;
+  width: 100% !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  width: clamp(260px, 28vw, 380px);
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #e8e8e8;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-240px * 6 - 15px * 6)); }
+}
+
+/* Enable auto-scroll animation only on wide desktop screens */
+@media (min-width: 1200px) {
+  .gallery-container { overflow: hidden; }
+  .pizza-gallery { width: fit-content; animation: scroll 36s linear infinite; }
+  .pizza-gallery:hover { animation-play-state: paused; }
+}
+
+/* On smaller viewports, stop the auto-scroll and allow wrapping / horizontal scroll */
+@media (max-width: 1199px) {
+  .gallery-container { overflow-x: auto; overflow-y: visible; padding-bottom: 8px; }
+  .pizza-gallery { flex-wrap: wrap; width: 100%; animation: none !important; justify-content: center; }
+  .gallery-item { width: clamp(160px, 35vw, 240px); aspect-ratio: 4/3; }
+}
+
+@media (max-width: 480px) {
+  .gallery-item { width: 160px; height: auto; }
+}
+
+/* ===== FINAL SLIDE ===== */
+.final-slide {
+  background: linear-gradient(135deg, #93A8AC 0%, #4C5760 100%) !important;
+  color: white !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 40px 20px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.final-slide h1 {
+  color: white !important;
+  text-shadow: none;
+  border: none !important;
+  margin-bottom: 0.3em;
+  font-size: 1.8em;
+  font-weight: 300;
+}
+
+.final-slide p {
+  color: white !important;
+}
+
+.final-subtitle {
+  font-size: 0.85em;
+  margin: 0.3em 0 0.8em;
+  color: #D7CEB2 !important;
+}
+
+.feedback-text {
+  font-size: 0.5em;
+  color: #D7CEB2 !important;
+  margin: 0.5em 0;
+}
+
+.final-slide .emoji-reactions {
+  margin: 0.8em 0;
+  gap: 10px;
+}
+
+.final-slide .emoji-btn {
+  background: none !important;
+  border: none !important;
+  width: 120px;
+  height: 100px;
+  padding: 0 !important;
+}
+
+.final-slide .emoji-btn:hover {
+  background: none !important;
+  transform: scale(1.2);
+}
+
+.final-footer {
+  margin-top: 1em;
+  padding-top: 0.8em;
+  border-top: 1px solid rgba(215, 206, 178, 0.3);
+  font-size: 0.75em;
+  color: #D7CEB2 !important;
+  width: 100%;
+  max-width: 300px;
+}
+
+.final-footer p {
+  margin: 0.2em 0;
+/* Takeaway modal content sizing */
+#takeaway-detail-content h2 { font-size: 1.2em; margin-bottom: 0.4em; color: #4C5760; }
+#takeaway-detail-content p { font-size: 0.95em; color: #66635B; line-height: 1.6; }
+
+/* Final slide emoji badge spacing */
+.final-emoji .emoji-count { margin-left: 6px; font-size: 0.85em; vertical-align: middle; }
+
+/* Centered slide helper (used for intro/page 5) */
+.centered-slide .content-text { text-align: center; }
+
+/* Specific compact rules for the intro/centered slide so all list items fit */
+.centered-slide {
+  padding: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+.centered-slide .slide-content {
+  grid-template-columns: minmax(220px, 1fr) 360px !important;
+  gap: 18px !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+/* ensure the text column is centered vertically and horizontally */
+.centered-slide .content-text {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.centered-slide h2 { text-align: center !important; }
+.centered-slide .content-text ul li {
+  padding: 8px 0 !important;
+  font-size: clamp(13px, 1.6vw, 15px) !important;
+  line-height: 1.28 !important;
+}
+.centered-slide .content-image img {
+  max-width: 420px !important;
+  border-radius: 6px !important;
+}
+
+/* Extra compact adjustments because list still overflows */
+.centered-slide .content-text ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.centered-slide .content-text ul li {
+  padding: 6px 0 !important;
+  font-size: clamp(12px, 1.4vw, 14px) !important;
+  line-height: 1.18 !important;
+}
+.centered-slide h2 {
+  font-size: clamp(18px, 3vw, 22px) !important;
+  margin-bottom: 8px !important;
+}
+.centered-slide .slide-content {
+  grid-template-columns: minmax(180px, 1fr) 360px !important;
+  gap: 12px !important;
+}
+.centered-slide .content-image img {
+  max-width: 360px !important;
+  max-height: 280px !important;
+  object-fit: cover !important;
+}
+
+/* If vertical space is too tight, hide the image so text fits */
+@media (max-height: 720px) {
+  .centered-slide .content-image { display: none !important; }
+  .centered-slide .slide-content { grid-template-columns: 1fr !important; }
+}
+
+.final-footer .contact-info {
+  opacity: 0.8;
+}
+
+.final-footer .thank-you-text {
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .slide-content {
+    flex-direction: column;
+  }
+  
+  .content-image {
+    max-width: 100%;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .takeaways {
+    grid-template-columns: 1fr;
+  }
+  
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .step-content {
+    text-align: center;
+  }
+  
+  .pizza-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .reveal h1 {
+    font-size: 2em;
+  }
+  
+  .reveal h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* ===== FINAL SLIDE OVERRIDES ===== */
+/* Stronger, last-resort rules to ensure final slide content is centered and visible */
+.final-slide {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: calc(100vh - 40px) !important;
+  padding: 30px 40px !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+}
+
+.final-slide > * {
+  width: 100%;
+  max-width: 920px;
+  margin: 0.5em auto !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+}
+
+.final-slide .emoji-reactions {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+}
+
+.final-slide .final-footer {
+  margin-top: 1em !important;
+  width: 100% !important;
+}
+
+/* ensure no child element with large top margin pushes content down */
+.final-slide * { margin-top: 0 !important; margin-bottom: 0.5em !important; }
+
+/* ===== SLIDE-SPECIFIC FIXES ===== */
+/* Gallery: ensure tiles have consistent background and no oversized white gaps */
+.gallery-item {
+  background: #fafafa; /* subtle neutral bg while image loads */
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.06);
+  width: clamp(140px, 18vw, 220px);
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+.gallery-item img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Reduce card vertical footprint so Essentials slide doesn't push layout */
+.card { min-height: 120px; padding: 14px 12px; }
+.card p { font-size: 0.82em; }
+.card-icon { font-size: 1.8em; }
+
+/* Steps: smaller number circle and compact paddings */
+.step { grid-template-columns: 42px 1fr; gap: 12px; margin: 10px 0; }
+.step-number { width: 42px; height: 42px; font-size: 1.05em; }
+.step-content { padding: 12px; }
+.step-content h4 { font-size: 1em; }
+
+/* Bake slide image: constrain height to avoid pushing content down */
+.slide-content .content-image img { max-height: 420px; object-fit: cover; }
+.slide-content .content-text .highlight-box { margin-bottom: 10px; }
+
+/* Takeaway overlay: override inline styles for better sizing and mobile */
+#takeaway-overlay { display: none; align-items: center; justify-content: center; }
+#takeaway-overlay > div {
+  background: white !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  max-width: 340px !important;
+  width: calc(100% - 40px) !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+}
+#takeaway-detail-content h2 { font-size: 0.85em; margin-bottom: 0.3em; }
+#takeaway-detail-content p { font-size: 0.72em; line-height: 1.4; }
+
+/* Final slide: ensure emoji buttons don't overlap and footer stays visible */
+.final-slide .emoji-reactions { gap: 40px; flex-wrap: wrap; }
+.final-slide .emoji-btn { margin: 0 6px; }
+.final-slide { min-height: 60vh !important; }
+
+/* Small screens: further compaction */
+@media (max-width: 480px) {
+  .gallery-item { width: 160px; height: 120px; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .slide-content { grid-template-columns: 1fr; }
+  .content-image img { max-width: 100%; max-height: 320px; }
+  #takeaway-detail-content h2 { font-size: 1em; }
+  #takeaway-detail-content p { font-size: 0.9em; }
+}
+
+/* ===== FORCE FIT: aggressive responsive rules to ensure content fits viewport ===== */
+:root {
+  --base-font: 16px;
+}
+
+html, body { height: 100%; }
+
+/* base scaling: slightly smaller on narrow screens */
+body {
+  font-size: clamp(13px, 1.4vw, 16px) !important;
+}
+
+.reveal section {
+  padding: clamp(12px, 2.5vw, 28px) !important;
+  min-height: 100vh !important;
+  box-sizing: border-box;
+}
+
+/* Headings scale down to fit */
+.reveal h1 { font-size: clamp(20px, 4.2vw, 32px) !important; line-height: 1.05 !important; }
+.reveal h2 { font-size: clamp(18px, 3.2vw, 26px) !important; }
+.reveal h3 { font-size: clamp(14px, 2.6vw, 20px) !important; }
+.reveal h4 { font-size: clamp(12px, 2.2vw, 16px) !important; }
+
+/* Paragraphs slightly smaller and constrained */
+.reveal p, .reveal li { font-size: clamp(12px, 1.6vw, 15px) !important; line-height: 1.4 !important; }
+.reveal p { max-width: 92vw !important; }
+
+/* Reduce paddings for components to gain space */
+.card, .step-content, .highlight-box, .cta { padding: 10px !important; }
+.card { min-height: 100px !important; }
+
+/* Make grids more compact when vertical space is limited */
+@media (max-height: 820px) {
+  .reveal section { padding: 12px 16px !important; }
+  .slide-content { gap: 18px; }
+  .cards-grid { gap: 12px; }
+  .gallery-item { width: 180px; height: 130px; }
+}
+
+@media (max-height: 700px) {
+  body { font-size: 13px !important; }
+  .reveal h1 { font-size: 22px !important; }
+  .reveal h2 { font-size: 20px !important; }
+  .reveal p, .reveal li { font-size: 12px !important; }
+  .card { min-height: 86px !important; }
+  .step-number { width: 36px !important; height: 36px !important; font-size: 1em !important; }
+}
+
+/* Final fallback: allow internal scrolling only if absolutely necessary but keep top-level fitting */
+.reveal section > * { max-height: calc(100vh - 40px); overflow: auto; }
+
+
+/* ===== LAYOUT CONTAINMENT FIX (Root-level) ===== */
+/* Apply robust box-sizing and flexible grid rules so boxes never force the viewport larger */
+*, *::before, *::after { box-sizing: border-box !important; }
+
+/* Ensure slide containers respect viewport and children can scroll without overflowing the root */
+.reveal, .reveal .slides, .reveal section { width: 100%; min-height: 100vh; }
+.reveal section { overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+.reveal section > * { max-height: calc(100vh - 60px); overflow: auto; box-sizing: border-box; }
+
+/* Make common multi-column layouts flexible and shrinkable */
+.slide-content { max-width: min(920px, 92vw) !important; width: 100% !important; grid-template-columns: minmax(0, 1fr) minmax(140px, 40%) !important; gap: 20px !important; }
+.slide-content .content-text { min-width: 0 !important; }
+.slide-content .content-image { min-width: 0 !important; }
+
+/* Cards grid becomes flow-aware so multiple cards don't push vertically */
+.cards-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important; gap: 16px !important; }
+.card { min-height: auto !important; }
+
+/* Gallery and images: constrain by viewport height, let width adapt */
+.gallery-container, .pizza-gallery { max-width: min(920px, 92vw); margin-left: auto; margin-right: auto; }
+.gallery-item, .gallery-item img, .content-image img { width: 100% !important; height: auto !important; max-height: calc(100vh - 260px) !important; object-fit: cover !important; }
+
+/* Reduce large fixed paddings/margins that can push content off-screen */
+.reveal section { padding: clamp(10px, 2.2vw, 22px) !important; }
+
+/* On extremely short viewports, allow slides to scroll while keeping layout intact */
+@media (max-height: 640px) {
+  .reveal section > * { max-height: none !important; overflow: auto !important; }
+  .slide-content { grid-template-columns: 1fr !important; }
+  .gallery-container { overflow-x: auto !important; }
+}
+
+/* ===== Reveal visibility fixes (after adding Bootstrap) ===== */
+/* Ensure container wrapper doesn't collapse the Reveal app */
+.container-fluid > .reveal { width: 100%; height: 100vh; }
+.reveal { width: 100% !important; height: 100% !important; min-height: 100vh !important; }
+.reveal .slides { height: 100% !important; }
+.reveal .slides section { min-height: 100vh !important; box-sizing: border-box !important; }
+
+/* Make sure slides are displayed (Bootstrap resets may interfere) */
+.reveal, .reveal .slides, .reveal .slides section { display: block !important; }
+
+/* If Reveal's centering uses transforms, keep their containers visible */
+.reveal .slides { position: relative !important; }
+
+/* Emergency fallback: if Reveal transforms fail or JS errors occur,
+   force sections visible (stacked) so content isn't a blank page. */
+.reveal .slides section {
+  position: relative !important;
+  display: block !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+}
+
+.reveal { visibility: visible !important; }
+
+
+
