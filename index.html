@@ -31,6 +31,7 @@
         <div id="client-count-display" style="font-size: 1.5em; font-weight: 600; color: #4C5760; margin: 1em 0;">
           👥 Connected: <span id="client-count">0</span> pizza lover(s)
         </div>
+        <div id="impatient-counter" style="font-size: 1.3em; color: #FFD700; margin: 0.8em 0; min-height: 1.6em; font-weight: 600;"></div>
         <div class="highlight-box wait-instructions-box">
           <h4>📱 How to Participate:</h4>
           <ul>
@@ -685,6 +686,10 @@
     const urlParams = new URLSearchParams(window.location.search);
     const wantsPresenterMode = urlParams.has('presenter');
     
+    // Initialize global variables for impatient counter (used by both presenter and audience)
+    window.impatientAttempts = 0;
+    window.presenterImpatientDisplay = null;
+    
     // Presenter password check
     let isPresenter = false;
     const PRESENTER_PASSWORD = 'pizza2025'; // Change this to your preferred password
@@ -808,23 +813,40 @@
         position: fixed;
         bottom: 70px;
         left: 20px;
-        background: rgba(147, 168, 172, 0.95);
+        background: rgba(76, 87, 96, 0.95);
         color: white;
-        padding: 8px 12px;
-        font-size: 0.85em;
+        padding: 12px 16px;
+        font-size: 0.95em;
         font-weight: normal;
         z-index: 99999;
         border-radius: 6px;
         display: flex;
-        gap: 8px;
-        align-items: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         pointer-events: auto;
+        min-width: 200px;
       `;
       
       const titleSpan = document.createElement('span');
       titleSpan.textContent = '🎤 Presenter';
-      titleSpan.style.opacity = '0.8';
+      titleSpan.style.cssText = `
+        opacity: 0.9;
+        font-weight: bold;
+        font-size: 1em;
+      `;
+      
+      const impatientDisplay = document.createElement('div');
+      impatientDisplay.style.cssText = `
+        color: #FFD700;
+        font-size: 1em;
+        font-weight: 600;
+        margin: 0;
+        min-height: 20px;
+        padding: 4px 0;
+      `;
+      impatientDisplay.textContent = '✨ Everything looks calm!';
       
       const resetBtn = document.createElement('button');
       resetBtn.textContent = '🔄 Reset';
@@ -833,12 +855,15 @@
         background: rgba(215, 206, 178, 0.9);
         color: #4C5760;
         border: none;
-        padding: 8px 12px;
+        padding: 12px 16px;
         border-radius: 4px;
         cursor: pointer;
-        font-size: 1em;
+        font-size: 1.2em;
+        font-weight: bold;
         transition: all 0.2s;
         pointer-events: auto;
+        min-width: 120px;
+        text-align: center;
       `;
       
       let clickCount = 0;
@@ -879,6 +904,12 @@
             })
             .then(() => {
               console.log('✅ All data reset successfully');
+              // Reset impatient counter on Firebase
+              return database.ref('impatient/attempts').set(0);
+            })
+            .then(() => {
+              impatientDisplay.textContent = '✨ Everything looks calm!';
+              window.impatientAttempts = 0;
               resetBtn.textContent = '✅ Done!';
               resetBtn.style.background = 'rgba(147, 168, 172, 0.9)';
               setTimeout(() => {
@@ -909,8 +940,31 @@
       });
       
       presenterBanner.appendChild(titleSpan);
+      presenterBanner.appendChild(impatientDisplay);
       presenterBanner.appendChild(resetBtn);
       document.body.appendChild(presenterBanner);
+      
+      // Make impatientDisplay accessible globally for updates
+      window.presenterImpatientDisplay = impatientDisplay;
+
+      // Listen to Firebase for impatient counter updates in presenter mode
+      const impatientRef = database.ref('impatient/attempts');
+      impatientRef.on('value', (snapshot) => {
+        const value = snapshot.val() || 0;
+        window.impatientAttempts = value;
+        
+        // Update presenter display
+        if (value === 0) {
+          impatientDisplay.textContent = '✨ Everything looks calm!';
+        } else {
+          const msgs = [
+            `⏰ ${value} person can't wait to start!`,
+            `😅 ${value} people are getting impatient...`,
+            `🚀 ${value} eager souls trying to skip ahead!`
+          ];
+          impatientDisplay.textContent = msgs[Math.min(2, Math.floor(value / 2))];
+        }
+      });
 
       Reveal.on('slidechanged', event => {
         slideStateRef.set({
@@ -940,15 +994,113 @@
       document.body.appendChild(audienceBanner);
 
       let ignoreSlideChange = false;
+      let isLocked = true; // Start locked on slide 0
+      let impatientAttempts = 0;
+
+      // Listener for impatient counter from Firebase
+      const impatientRef = database.ref('impatient/attempts');
+      impatientRef.on('value', (snapshot) => {
+        const value = snapshot.val() || 0;
+        impatientAttempts = value;
+        window.impatientAttempts = value;
+        
+        // Update display
+        const msgs = [
+          value === 0 ? '' : `⏰ ${value} person can't wait to start!`,
+          `😅 ${value} people are getting impatient...`,
+          `🚀 ${value} eager souls trying to skip ahead!`
+        ];
+        let message;
+        if (value === 0) {
+          message = '';
+        } else {
+          message = msgs[Math.min(2, Math.floor(value / 2))];
+        }
+        
+        // Update audience counter
+        const counterEl = document.getElementById('impatient-counter');
+        if (counterEl) {
+          counterEl.textContent = message;
+        }
+        
+        // Update presenter display
+        if (window.presenterImpatientDisplay) {
+          window.presenterImpatientDisplay.textContent = message || '✨ Everything looks calm!';
+        }
+      });
 
       slideStateRef.on('value', (snapshot) => {
         const state = snapshot.val();
         if (state) {
+          // Unlock audience when presenter moves beyond slide 0
+          if (state.indexh > 0) {
+            isLocked = false;
+          } else {
+            isLocked = true;
+          }
+          
+          // Only allow movement if unlocked OR if already on slide 0
+          if (!isLocked || state.indexh === 0) {
+            ignoreSlideChange = true;
+            Reveal.slide(state.indexh, state.indexv || 0);
+            setTimeout(() => { ignoreSlideChange = false; }, 100);
+          } else if (isLocked && Reveal.getState().indexh > 0) {
+            // If locked and we somehow got ahead, force back to slide 0
+            ignoreSlideChange = true;
+            Reveal.slide(0, 0);
+            setTimeout(() => { ignoreSlideChange = false; }, 100);
+          }
+        } else {
+          // No state yet - lock everyone on slide 0
+          isLocked = true;
           ignoreSlideChange = true;
-          Reveal.slide(state.indexh, state.indexv || 0);
+          Reveal.slide(0, 0);
           setTimeout(() => { ignoreSlideChange = false; }, 100);
         }
       });
+
+      // Prevent keyboard navigation when locked
+      Reveal.on('slidechanged', (event) => {
+        if (isLocked && (event.indexh > 0 || event.indexv > 0)) {
+          // Increment on Firebase - this will trigger the listener above
+          impatientRef.set(impatientAttempts + 1);
+          
+          // Show toast notification
+          const toast = document.createElement('div');
+          toast.style.cssText = `
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: rgba(76, 87, 96, 0.95);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            z-index: 50000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            animation: slideIn 0.3s ease-out;
+          `;
+          toast.textContent = '⏳ Waiting for presenter to start...';
+          document.body.appendChild(toast);
+          setTimeout(() => toast.remove(), 2500);
+          
+          // Force back to slide 0
+          Reveal.slide(0, 0);
+        }
+      });
+      
+      // Add animation style
+      if (!document.getElementById('slide-in-animation')) {
+        const style = document.createElement('style');
+        style.id = 'slide-in-animation';
+        style.textContent = `
+          @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+          }
+        `;
+        document.head.appendChild(style);
+      }
     }
 
     // Fullscreen warning
